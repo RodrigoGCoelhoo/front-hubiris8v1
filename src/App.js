@@ -41,7 +41,7 @@ function App() {
 
   async function getData () {
 
-      Axios.get('https://hubiris8.herokuapp.com/hubapi/clientes', {headers})
+      Axios.get('https://hubiris8-back.herokuapp.com/hubapi/clientes', {headers})
             .then((response) => {
                 console.log(response);
             })
@@ -49,7 +49,7 @@ function App() {
                 console.log(error);
             });
 
-      Axios.get('https://hubiris8.herokuapp.com/hubapi/statuspc', {headers})
+      Axios.get('https://hubiris8-back.herokuapp.com/hubapi/statuspc', {headers})
             .then((response) => {
                 setStatusPc(response["data"]);
             })
@@ -57,7 +57,7 @@ function App() {
                 console.log(error);
             });
 
-      Axios.get('https://hubiris8.herokuapp.com/hubapi/statusfiles', {headers})
+      Axios.get('https://hubiris8-back.herokuapp.com/hubapi/statusfiles', {headers})
             .then((response) => {
                 setStatusFiles(response["data"]);
                 setErrStatusFiles(false);
@@ -66,7 +66,7 @@ function App() {
                 console.log(error);
             });
 
-      Axios.get('https://hubiris8.herokuapp.com/hubapi/tamanhofiles', {headers})
+      Axios.get('https://hubiris8-back.herokuapp.com/hubapi/tamanhofiles', {headers})
             .then((response) => {
               setStatusTamanho(response["data"]);
               setErrStatusTamanho(false);
@@ -75,7 +75,7 @@ function App() {
                 console.log(error);
             });
 
-      Axios.get('https://hubiris8.herokuapp.com/hubapi/statussightcorp', {headers})
+      Axios.get('https://hubiris8-back.herokuapp.com/hubapi/statussightcorp', {headers})
             .then((response) => {
                 setStatusSight(response["data"]);
                 setErrStatusSight(false);
